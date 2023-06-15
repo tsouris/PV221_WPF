@@ -4,9 +4,143 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PV221_WPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="1024" Width="1440">
+    <Window.Background>
+        <ImageBrush ImageSource="/Pictures/Log In (4).jpg"/>
+    </Window.Background>
+    <materialDesign:Card VerticalAlignment="Center" HorizontalAlignment="Center" Width="507px" Height="667px" Background="#000000">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+            <TextBlock 
+                Text="Log In" 
+                Grid.Column="1" Grid.Row="0" 
+                VerticalAlignment="Center" HorizontalAlignment ="Center" 
+                FontSize="48px" Foreground="White" FontFamily="Berlin Sans FB"/>
+            <TextBox
+                Grid.Column="1" Grid.Row="1"
+                VerticalAlignment="Bottom"
+                materialDesign:HintAssist.Hint="Email"
+                Foreground="White" FontFamily="Arial"/>
+            <Grid 
+                Grid.Column="0" Grid.Row="1" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <materialDesign:PackIcon
+                    Margin="4"
+                    Kind="Email"
+                    VerticalAlignment="Center"
+                    Foreground="White"/>
+            </Grid>
+            <PasswordBox
+                Grid.Column="1" Grid.Row="2"
+                VerticalAlignment="Bottom"
+                materialDesign:HintAssist.HelperText="At least 8 characters"
+                materialDesign:HintAssist.Hint="Password"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Foreground="White"/>
+            <Grid
+                Grid.Column="0" Grid.Row="2" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <materialDesign:PackIcon
+                    Margin="4"
+                    Kind="Key"
+                    VerticalAlignment="Center"
+                    Foreground="White"/>
+            </Grid>
+            <Button
+                Grid.Column="1" Grid.Row="3" 
+                Content="Forgot Password?"
+                Foreground="#1A7FC1"
+                HorizontalAlignment="Right" VerticalAlignment="Top"
+                Margin="0,10,10,0"
+                Style="{StaticResource MaterialDesignFlatButton}"/>
+            <Button
+                Grid.Column="1" Grid.Row="4"
+                Width="490px" Height="68px"
+                Background="#1A7FC1"
+                VerticalAlignment="Top" HorizontalAlignment="Center"
+                Margin="0 0 0 0">
+                <TextBlock 
+                    Text="Log In" 
+                    Foreground="White" FontSize="31.35px" FontWeight="Bold" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Berlin Sans FB"/>
+            </Button>
+            <Line 
+                Grid.Column="1" Grid.Row="5"
+                Width="164px"
+                X1="0" Y1="0" 
+                X2="1" Y2="0" 
+                Margin="10 0 10 0"
+                Stroke="White"
+                StrokeThickness="2" 
+                Stretch="Fill" 
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Line 
+                Grid.Column="1" Grid.Row="5"
+                Width="164px"
+                X1="0" Y1="0" 
+                X2="1" Y2="0" 
+                Margin="10 0 10 0"
+                Stroke="White"
+                StrokeThickness="2" 
+                Stretch="Fill" 
+                HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <TextBlock
+                Text="Or"
+                Grid.Column="1" Grid.Row="5"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="27px" Height="29px"
+                FontSize="24"
+                Foreground="White"/>
+            <Image 
+                Source="C:\Users\User\source\repos\PV221_WPF\Images\Google.png"
+                Grid.Column="1" Grid.Row="6"
+                VerticalAlignment="Center" HorizontalAlignment="Left"
+                Width="48px" Height="48px"
+                Margin="120 0 0 0"/>
+            <Image
+                Source="/Images/Facebook.png"
+                Grid.Column="1" Grid.Row="6"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Width="48px" Height="48px"
+                Margin="0 0 0 0"/>
+            <Image
+                Source="/Images/Apple.png" 
+                Grid.Column="1" Grid.Row="6"
+                VerticalAlignment="Center" HorizontalAlignment="Right"
+                Width="48px" Height="48px"
+                Margin="0 0 120 0"/>
+            <TextBlock
+                Text="Don't have an account?"
+                Grid.Column="1" Grid.Row="8"
+                Foreground="White"
+                Width="321px" Height="29px"
+                FontSize="24"
+                VerticalAlignment="Top" HorizontalAlignment="Left"
+                Margin="50 0 0 0"/>
+            <Button
+                Grid.Column="1" Grid.Row="8" 
+                Content="Sign Up"
+                Foreground="#1A7FC1"
+                VerticalAlignment="Top" HorizontalAlignment="Right"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Margin="0,0,65,0"/>
+        </Grid>
+    </materialDesign:Card>
+
 </Window>
