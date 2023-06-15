@@ -108,7 +108,7 @@
                 FontSize="24"
                 Foreground="White"/>
             <Image 
-                Source="C:\Users\User\source\repos\PV221_WPF\Images\Google.png"
+                Source="\Images\Google.png"
                 Grid.Column="1" Grid.Row="6"
                 VerticalAlignment="Center" HorizontalAlignment="Left"
                 Width="48px" Height="48px"
