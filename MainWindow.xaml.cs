@@ -39,6 +39,7 @@ namespace PV221_WPF
         {
             if (!string.IsNullOrWhiteSpace(tbTopic.Text) &&
                 !string.IsNullOrWhiteSpace(tbDescr.Text) &&
+                !string.IsNullOrWhiteSpace(tbDate.Text) &&
                 DateTime.TryParse(tbDate.Text, out DateTime date))
             {
                 Task newTask = new Task()
@@ -70,11 +71,19 @@ namespace PV221_WPF
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (tasksDataGrid.SelectedItem is Task selectedTask)
+            if (!string.IsNullOrWhiteSpace(tbTopic.Text) &&
+                !string.IsNullOrWhiteSpace(tbDescr.Text) &&
+                !string.IsNullOrWhiteSpace(tbDate.Text) &&
+                DateTime.TryParse(tbDate.Text, out DateTime date) &&
+                tasksDataGrid.SelectedItem is Task selectedTask)
             {
                 selectedTask.Topic = tbTopic.Text;
                 selectedTask.Description = tbDescr.Text;
-                selectedTask.Date = tbDate.Text;
+                selectedTask.Date = date.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid data in all fields.");
             }
         }
 
